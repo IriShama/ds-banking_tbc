@@ -1,0 +1,112 @@
+{/* Colors.mdx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Colors/Primitives" />
+
+# Color Primitives
+
+Палитра базовых цветов дизайн-системы. Не используй примитивы напрямую в компонентах —
+используй семантические токены (Icon, Background, Overlay, Interaction).
+
+export const Swatch = ({ name, color }) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '8px' }}>
+    <div style={{
+      width: '48px',
+      height: '48px',
+      borderRadius: '8px',
+      backgroundColor: color,
+      border: '1px solid #e0e0e0',
+      flexShrink: 0,
+    }} />
+    <div>
+      <div style={{ fontWeight: 600, fontSize: '14px' }}>{name}</div>
+      <code style={{ fontSize: '12px', color: '#666' }}>{color}</code>
+    </div>
+  </div>
+);
+
+export const ColorGroup = ({ title, children }) => (
+  <div style={{ marginBottom: '32px' }}>
+    <h3 style={{ marginBottom: '12px', fontSize: '16px', fontWeight: 600 }}>{title}</h3>
+    {children}
+  </div>
+);
+
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '24px' }}>
+
+<ColorGroup title="Brand">
+  <Swatch name="brand dark" color="#0095b0" />
+  <Swatch name="brand" color="#17adc1" />
+  <Swatch name="brand light" color="#00ccd6" />
+</ColorGroup>
+
+<ColorGroup title="Green">
+  <Swatch name="green dark" color="#007d00" />
+  <Swatch name="green" color="#15ad73" />
+  <Swatch name="green light" color="#1cc584" />
+  <Swatch name="green super light" color="#42dd9a" />
+</ColorGroup>
+
+<ColorGroup title="Red">
+  <Swatch name="dark red" color="#c54600" />
+  <Swatch name="red" color="#ff5631" />
+  <Swatch name="red light" color="#fd6c49" />
+  <Swatch name="red super light" color="#fd7f60" />
+  <Swatch name="red transparent" color="#ff000033" />
+</ColorGroup>
+
+<ColorGroup title="Yellow">
+  <Swatch name="yellow dark" color="#eba503" />
+  <Swatch name="yellow" color="#f5b50d" />
+  <Swatch name="yellow light" color="#f9c73f" />
+</ColorGroup>
+
+<ColorGroup title="Pink">
+  <Swatch name="pink dark" color="#f84682" />
+  <Swatch name="pink" color="#fe6090" />
+  <Swatch name="pink light" color="#fd80a1" />
+</ColorGroup>
+
+<ColorGroup title="Violet">
+  <Swatch name="violet neon" color="#a56ffe" />
+  <Swatch name="violet dark" color="#867dff" />
+  <Swatch name="violet" color="#9996ff" />
+</ColorGroup>
+
+<ColorGroup title="Grey">
+  <Swatch name="grey" color="#bfbfbf" />
+  <Swatch name="grey light" color="#f5f5f5" />
+</ColorGroup>
+
+<ColorGroup title="Blue (text/dark)">
+  <Swatch name="100" color="#0e0723" />
+  <Swatch name="80" color="#0e0723cc" />
+  <Swatch name="60" color="#0e072399" />
+  <Swatch name="50" color="#0e072380" />
+  <Swatch name="30" color="#0e07234d" />
+  <Swatch name="25" color="#0e072340" />
+  <Swatch name="10" color="#0e07231a" />
+</ColorGroup>
+
+<ColorGroup title="Black">
+  <Swatch name="100" color="#141414" />
+  <Swatch name="80" color="#141414cc" />
+  <Swatch name="60" color="#14141499" />
+  <Swatch name="50" color="#14141480" />
+  <Swatch name="40" color="#14141466" />
+  <Swatch name="30" color="#1414144d" />
+  <Swatch name="20" color="#14141433" />
+  <Swatch name="10" color="#1414141a" />
+</ColorGroup>
+
+<ColorGroup title="White">
+  <Swatch name="100" color="#ffffff" />
+  <Swatch name="60" color="#ffffff99" />
+  <Swatch name="50" color="#ffffff80" />
+  <Swatch name="30" color="#ffffff4d" />
+  <Swatch name="25" color="#ffffff40" />
+  <Swatch name="10" color="#ffffff1a" />
+  <Swatch name="0" color="#ffffff00" />
+</ColorGroup>
+
+</div>

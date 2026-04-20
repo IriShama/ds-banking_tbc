@@ -1,0 +1,104 @@
+{/* SemanticColors.mdx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Colors/Semantic" />
+
+# Semantic Color Tokens
+
+Семантические цвета — это то, что дизайнеры и разработчики используют в компонентах.
+Каждый токен переключается автоматически между Light и Dark темой.
+
+export const SemanticRow = ({ name, cssVar, light, dark }) => (
+  <div style={{
+    display: 'grid',
+    gridTemplateColumns: '1fr 100px 100px',
+    alignItems: 'center',
+    gap: '12px',
+    padding: '8px 0',
+    borderBottom: '1px solid #f0f0f0',
+  }}>
+    <div>
+      <div style={{ fontWeight: 600, fontSize: '13px' }}>{name}</div>
+      <code style={{ fontSize: '11px', color: '#888' }}>{cssVar}</code>
+    </div>
+    <div style={{
+      width: '48px', height: '48px', borderRadius: '8px',
+      backgroundColor: light, border: '1px solid #e0e0e0',
+    }} />
+    <div style={{
+      width: '48px', height: '48px', borderRadius: '8px',
+      backgroundColor: dark, border: '1px solid #333',
+      background: `${dark}`,
+      outline: dark === '#ffffff' || dark === '#ffffff80' || dark === '#ffffff40' ? '1px solid #ccc' : 'none',
+    }} />
+  </div>
+);
+
+export const Section = ({ title, children }) => (
+  <div style={{ marginBottom: '40px' }}>
+    <h2 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '8px' }}>{title}</h2>
+    <div style={{
+      display: 'grid',
+      gridTemplateColumns: '1fr 100px 100px',
+      padding: '8px 0',
+      borderBottom: '2px solid #ddd',
+      marginBottom: '4px',
+    }}>
+      <div style={{ fontSize: '12px', fontWeight: 600, color: '#888' }}>TOKEN</div>
+      <div style={{ fontSize: '12px', fontWeight: 600, color: '#888' }}>LIGHT</div>
+      <div style={{ fontSize: '12px', fontWeight: 600, color: '#888' }}>DARK</div>
+    </div>
+    {children}
+  </div>
+);
+
+<Section title="Icon">
+  <SemanticRow name="primary" cssVar="--color-icon-primary" light="#0e0723" dark="#ffffff" />
+  <SemanticRow name="secondary" cssVar="--color-icon-secondary" light="#0e072380" dark="#ffffff80" />
+  <SemanticRow name="tertiary" cssVar="--color-icon-tertiary" light="#0e072340" dark="#ffffff40" />
+  <SemanticRow name="contrast" cssVar="--color-icon-contrast" light="#ffffff" dark="#ffffff" />
+  <SemanticRow name="contrast-onlight" cssVar="--color-icon-contrast-onlight" light="#0e0723" dark="#0e0723" />
+  <SemanticRow name="inverse" cssVar="--color-icon-inverse" light="#ffffff" dark="#0e0723" />
+  <SemanticRow name="brand" cssVar="--color-icon-brand" light="#0095b0" dark="#17adc1" />
+</Section>
+
+<Section title="Icon / Status">
+  <SemanticRow name="success" cssVar="--color-icon-status-success" light="#15ad73" dark="#1cc584" />
+  <SemanticRow name="error" cssVar="--color-icon-status-error" light="#ff5631" dark="#fd6c49" />
+  <SemanticRow name="warning" cssVar="--color-icon-status-warning" light="#eba503" dark="#f5b50d" />
+  <SemanticRow name="info" cssVar="--color-icon-status-info" light="#0095b0" dark="#17adc1" />
+</Section>
+
+<Section title="Icon / Accent">
+  <SemanticRow name="snowberry" cssVar="--color-icon-accent-snowberry" light="#0095b0" dark="#17adc1" />
+  <SemanticRow name="blueberry" cssVar="--color-icon-accent-blueberry" light="#867dff" dark="#9996ff" />
+  <SemanticRow name="strawberry" cssVar="--color-icon-accent-strawberry" light="#f84682" dark="#fe6090" />
+  <SemanticRow name="grapeberry" cssVar="--color-icon-accent-grapeberry" light="#ff5631" dark="#fd6c49" />
+  <SemanticRow name="cloudberry" cssVar="--color-icon-accent-cloudberry" light="#eba503" dark="#f5b50d" />
+  <SemanticRow name="melonberry" cssVar="--color-icon-accent-melonberry" light="#15ad73" dark="#1cc584" />
+</Section>
+
+<Section title="Background">
+  <SemanticRow name="bg / inverse / primary" cssVar="--color-bg-inverse-primary" light="#ffffff" dark="#0e0723" />
+</Section>
+
+<Section title="Overlay">
+  <SemanticRow name="primary" cssVar="--color-overlay-primary" light="#14141499" dark="#141414cc" />
+  <SemanticRow name="secondary" cssVar="--color-overlay-secondary" light="#1414144d" dark="#1414144d" />
+  <SemanticRow name="tertiary" cssVar="--color-overlay-tertiary" light="#1414141a" dark="#1414141a" />
+  <SemanticRow name="contrast / primary" cssVar="--color-overlay-contrast-primary" light="#ffffff99" dark="#ffffff99" />
+  <SemanticRow name="contrast / secondary" cssVar="--color-overlay-contrast-secondary" light="#ffffff4d" dark="#ffffff4d" />
+  <SemanticRow name="contrast / tertiary" cssVar="--color-overlay-contrast-tertiary" light="#ffffff1a" dark="#ffffff1a" />
+</Section>
+
+<Section title="Interaction">
+  <SemanticRow name="press" cssVar="--color-interaction-press" light="#1414141a" dark="#ffffff1a" />
+  <SemanticRow name="press-contrast" cssVar="--color-interaction-press-contrast" light="#ffffff1a" dark="#ffffff1a" />
+  <SemanticRow name="press-contrast-onlight" cssVar="--color-interaction-press-contrast-onlight" light="#1414141a" dark="#1414141a" />
+  <SemanticRow name="press-inverse" cssVar="--color-interaction-press-inverse" light="#ffffff1a" dark="#1414141a" />
+  <SemanticRow name="press-onbrand" cssVar="--color-interaction-press-onbrand" light="#0e07231a" dark="#ffffff1a" />
+</Section>
+
+<Section title="Component">
+  <SemanticRow name="button" cssVar="--color-comp-button" light="#0e0723" dark="#ffffff" />
+</Section>

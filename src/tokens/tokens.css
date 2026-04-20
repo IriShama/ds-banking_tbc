@@ -1,0 +1,241 @@
+/* ===========================================
+   Design Tokens — auto-generated from Figma
+   Do not edit manually. Re-export from Tokens Studio.
+   =========================================== */
+
+/* ---- Primitives ---- */
+:root {
+
+  /* color */
+  --color-green-green-dark: #007d00;
+  --color-green-green: #15ad73;
+  --color-green-green-light: #1cc584;
+  --color-green-green-super-light: #42dd9a;
+  --color-red-dark-red: #c54600;
+  --color-red-red: #ff5631;
+  --color-red-red-light: #fd6c49;
+  --color-red-red-super-light: #fd7f60;
+  --color-red-red-transparent: #ff000033;
+  --color-white-0: #ffffff00;
+  --color-white-10: #ffffff1a;
+  --color-white-25: #ffffff40;
+  --color-white-30: #ffffff4d;
+  --color-white-50: #ffffff80;
+  --color-white-60: #ffffff99;
+  --color-white-100: #ffffff;
+  --color-blue-10: #0e07231a;
+  --color-blue-25: #0e072340;
+  --color-blue-30: #0e07234d;
+  --color-blue-50: #0e072380;
+  --color-blue-60: #0e072399;
+  --color-blue-80: #0e0723cc;
+  --color-blue-100: #0e0723;
+  --color-black-10: #1414141a;
+  --color-black-20: #14141433;
+  --color-black-30: #1414144d;
+  --color-black-40: #14141466;
+  --color-black-50: #14141480;
+  --color-black-60: #14141499;
+  --color-black-80: #141414cc;
+  --color-black-100: #141414;
+  --color-grey-grey: #bfbfbf;
+  --color-grey-grey-light: #f5f5f5;
+  --color-brand-color-brand-dark: #0095b0;
+  --color-brand-color-brand: #17adc1;
+  --color-brand-color-brand-light: #00ccd6;
+  --color-pink-pink-dark: #f84682;
+  --color-pink-pink: #fe6090;
+  --color-pink-pink-light: #fd80a1;
+  --color-yellow-yellow-dark: #eba503;
+  --color-yellow-yellow: #f5b50d;
+  --color-yellow-yellow-light: #f9c73f;
+  --color-violet-violet-neon: #a56ffe;
+  --color-violet-violet-dark: #867dff;
+  --color-violet-violet: #9996ff;
+
+  /* font */
+  --font-size-h1: 64px;
+  --font-size-h2: 48px;
+  --font-size-h3: 36px;
+  --font-size-text: 16px;
+  --font-size-hint: 12px;
+  --font-size-hint-small: 11px;
+  --font-size-h6: 18px;
+  --font-size-h5: 24px;
+  --font-size-h4: 30px;
+  --font-size-text-small: 14px;
+
+  /* spacing */
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-350: 28px;
+  --spacing-400: 32px;
+  --spacing-450: 36px;
+  --spacing-500: 40px;
+  --spacing-550: 44px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-none: 0px;
+  --spacing-025: 2px;
+  --spacing-050: 4px;
+  --spacing-width: 720px;
+  --spacing-min-height: 1600px;
+
+  /* border-radius */
+  --border-radius-none: 0px;
+  --border-radius-2xs: 4px;
+  --border-radius-3xs-temp: 6px;
+  --border-radius-xs: 8px;
+  --border-radius-sm: 12px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 24px;
+  --border-radius-2xl: 32px;
+  --border-radius-full: 999px;
+  --border-radius-screen-radii: 53px;
+
+  /* opacity */
+  --opacity-0: 0;
+  --opacity-10: 0.1;
+  --opacity-25: 0.25;
+  --opacity-40: 0.4;
+  --opacity-60: 0.6;
+  --opacity-75: 0.75;
+  --opacity-90: 0.9;
+  --opacity-100: 100;
+
+  /* size */
+  --size-100: 8px;
+  --size-125: 10px;
+  --size-150: 12px;
+  --size-200: 16px;
+  --size-250: 20px;
+  --size-300: 24px;
+  --size-350: 28px;
+  --size-400: 32px;
+  --size-450: 36px;
+  --size-500: 40px;
+  --size-550: 44px;
+  --size-600: 48px;
+  --size-700: 56px;
+  --size-800: 64px;
+  --size-1000: 80px;
+  --size-1100: 88px;
+  --size-1200: 96px;
+  --size-1300: 104px;
+  --size-1400: 112px;
+  --size-1500: 120px;
+  --size-none: 0px;
+  --size-025: 2px;
+  --size-050: 4px;
+  --size-card-sm: 128px;
+  --size-card-md: 160px;
+  --size-card-lg: 192px;
+  --size-card-xl: 224px;
+  --size-card-2xl: 264px;
+  --size-card-max: 416px;
+  --size-screen-widht: 393px;
+  --size-screen-height: 852px;
+
+  /* border-width */
+  --border-width-none: 0px;
+  --border-width-xs: 0.5px;
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 4px;
+  --border-width-xl: 8px;
+}
+
+/* ---- Semantic: Light (default) ---- */
+:root,
+[data-theme="light"] {
+
+  /* color.icon */
+  --color-icon-primary: #0e0723;
+  --color-icon-secondary: #0e072380;
+  --color-icon-tertiary: #0e072340;
+  --color-icon-contrast: #ffffff;
+  --color-icon-contrast-onlight: #0e0723;
+  --color-icon-inverse: #ffffff;
+  --color-icon-brand: #0095b0;
+  --color-icon-status-success: #15ad73;
+  --color-icon-status-error: #ff5631;
+  --color-icon-status-warning: #eba503;
+  --color-icon-status-info: #0095b0;
+  --color-icon-accent-snowberry: #0095b0;
+  --color-icon-accent-blueberry: #867dff;
+  --color-icon-accent-strawberry: #f84682;
+  --color-icon-accent-grapeberry: #ff5631;
+  --color-icon-accent-cloudberry: #eba503;
+  --color-icon-accent-melonberry: #15ad73;
+
+  /* color.bg */
+  --color-bg-inverse-primary: #ffffff;
+
+  /* color.overlay */
+  --color-overlay-primary: #14141499;
+  --color-overlay-secondary: #1414144d;
+  --color-overlay-tertiary: #1414141a;
+  --color-overlay-contrast-primary: #ffffff99;
+  --color-overlay-contrast-secondary: #ffffff4d;
+  --color-overlay-contrast-tertiary: #ffffff1a;
+
+  /* color.interaction */
+  --color-interaction-press: #1414141a;
+  --color-interaction-press-contrast: #ffffff1a;
+  --color-interaction-press-contrast-onlight: #1414141a;
+  --color-interaction-press-inverse: #ffffff1a;
+  --color-interaction-press-onbrand: #0e07231a;
+
+  /* color.comp */
+  --color-comp-button: #0e0723;
+}
+
+/* ---- Semantic: Dark ---- */
+[data-theme="dark"] {
+
+  /* color.icon */
+  --color-icon-primary: #ffffff;
+  --color-icon-secondary: #ffffff80;
+  --color-icon-tertiary: #ffffff40;
+  --color-icon-contrast: #ffffff;
+  --color-icon-contrast-onlight: #0e0723;
+  --color-icon-inverse: #0e0723;
+  --color-icon-brand: #17adc1;
+  --color-icon-status-success: #1cc584;
+  --color-icon-status-error: #fd6c49;
+  --color-icon-status-warning: #f5b50d;
+  --color-icon-status-info: #17adc1;
+  --color-icon-accent-snowberry: #17adc1;
+  --color-icon-accent-blueberry: #9996ff;
+  --color-icon-accent-strawberry: #fe6090;
+  --color-icon-accent-grapeberry: #fd6c49;
+  --color-icon-accent-cloudberry: #f5b50d;
+  --color-icon-accent-melonberry: #1cc584;
+
+  /* color.bg */
+  --color-bg-inverse-primary: #0e0723;
+
+  /* color.overlay */
+  --color-overlay-primary: #141414cc;
+  --color-overlay-secondary: #1414144d;
+  --color-overlay-tertiary: #1414141a;
+  --color-overlay-contrast-primary: #ffffff99;
+  --color-overlay-contrast-secondary: #ffffff4d;
+  --color-overlay-contrast-tertiary: #ffffff1a;
+
+  /* color.interaction */
+  --color-interaction-press: #ffffff1a;
+  --color-interaction-press-contrast: #ffffff1a;
+  --color-interaction-press-contrast-onlight: #1414141a;
+  --color-interaction-press-inverse: #1414141a;
+  --color-interaction-press-onbrand: #ffffff1a;
+
+  /* color.comp */
+  --color-comp-button: #ffffff;
+}

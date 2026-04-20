@@ -1,0 +1,144 @@
+{/* Foundations.mdx */}
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Tokens/Foundations" />
+
+# Foundations
+
+Базовые токены системы: типографика, отступы, скругления, прозрачность, обводки.
+
+export const ScaleRow = ({ name, cssVar, value, visual }) => (
+  <div style={{
+    display: 'grid',
+    gridTemplateColumns: '140px 240px 80px 1fr',
+    alignItems: 'center',
+    gap: '12px',
+    padding: '6px 0',
+    borderBottom: '1px solid #f5f5f5',
+    fontSize: '13px',
+  }}>
+    <div style={{ fontWeight: 600 }}>{name}</div>
+    <code style={{ fontSize: '11px', color: '#888' }}>{cssVar}</code>
+    <div style={{ color: '#555' }}>{value}</div>
+    <div>{visual}</div>
+  </div>
+);
+
+export const SpacingBar = ({ size }) => (
+  <div style={{
+    width: `${size}px`,
+    height: '20px',
+    backgroundColor: '#17adc1',
+    borderRadius: '4px',
+    minWidth: size === 0 ? '2px' : undefined,
+    opacity: size === 0 ? 0.3 : 1,
+  }} />
+);
+
+export const RadiusBox = ({ radius }) => (
+  <div style={{
+    width: '48px',
+    height: '48px',
+    border: '2px solid #17adc1',
+    borderRadius: radius > 100 ? '50%' : `${radius}px`,
+  }} />
+);
+
+export const FontSample = ({ size }) => (
+  <span style={{ fontSize: `${size}px`, lineHeight: 1.2 }}>Aa</span>
+);
+
+---
+
+## Font Size
+
+<ScaleRow name="H1" cssVar="--font-size-h1" value="64px" visual={<FontSample size={64} />} />
+<ScaleRow name="H2" cssVar="--font-size-h2" value="48px" visual={<FontSample size={48} />} />
+<ScaleRow name="H3" cssVar="--font-size-h3" value="36px" visual={<FontSample size={36} />} />
+<ScaleRow name="H4" cssVar="--font-size-h4" value="30px" visual={<FontSample size={30} />} />
+<ScaleRow name="H5" cssVar="--font-size-h5" value="24px" visual={<FontSample size={24} />} />
+<ScaleRow name="H6" cssVar="--font-size-h6" value="18px" visual={<FontSample size={18} />} />
+<ScaleRow name="Text" cssVar="--font-size-text" value="16px" visual={<FontSample size={16} />} />
+<ScaleRow name="Text Small" cssVar="--font-size-text-small" value="14px" visual={<FontSample size={14} />} />
+<ScaleRow name="Hint" cssVar="--font-size-hint" value="12px" visual={<FontSample size={12} />} />
+<ScaleRow name="Hint Small" cssVar="--font-size-hint-small" value="11px" visual={<FontSample size={11} />} />
+
+---
+
+## Spacing
+
+<ScaleRow name="none" cssVar="--spacing-none" value="0" visual={<SpacingBar size={0} />} />
+<ScaleRow name="025" cssVar="--spacing-025" value="2px" visual={<SpacingBar size={2} />} />
+<ScaleRow name="050" cssVar="--spacing-050" value="4px" visual={<SpacingBar size={4} />} />
+<ScaleRow name="100" cssVar="--spacing-100" value="8px" visual={<SpacingBar size={8} />} />
+<ScaleRow name="150" cssVar="--spacing-150" value="12px" visual={<SpacingBar size={12} />} />
+<ScaleRow name="200" cssVar="--spacing-200" value="16px" visual={<SpacingBar size={16} />} />
+<ScaleRow name="250" cssVar="--spacing-250" value="20px" visual={<SpacingBar size={20} />} />
+<ScaleRow name="300" cssVar="--spacing-300" value="24px" visual={<SpacingBar size={24} />} />
+<ScaleRow name="350" cssVar="--spacing-350" value="28px" visual={<SpacingBar size={28} />} />
+<ScaleRow name="400" cssVar="--spacing-400" value="32px" visual={<SpacingBar size={32} />} />
+<ScaleRow name="450" cssVar="--spacing-450" value="36px" visual={<SpacingBar size={36} />} />
+<ScaleRow name="500" cssVar="--spacing-500" value="40px" visual={<SpacingBar size={40} />} />
+<ScaleRow name="550" cssVar="--spacing-550" value="44px" visual={<SpacingBar size={44} />} />
+<ScaleRow name="600" cssVar="--spacing-600" value="48px" visual={<SpacingBar size={48} />} />
+<ScaleRow name="700" cssVar="--spacing-700" value="56px" visual={<SpacingBar size={56} />} />
+<ScaleRow name="800" cssVar="--spacing-800" value="64px" visual={<SpacingBar size={64} />} />
+<ScaleRow name="1000" cssVar="--spacing-1000" value="80px" visual={<SpacingBar size={80} />} />
+
+---
+
+## Border Radius
+
+<ScaleRow name="none" cssVar="--border-radius-none" value="0" visual={<RadiusBox radius={0} />} />
+<ScaleRow name="2xs" cssVar="--border-radius-2xs" value="4px" visual={<RadiusBox radius={4} />} />
+<ScaleRow name="xs" cssVar="--border-radius-xs" value="8px" visual={<RadiusBox radius={8} />} />
+<ScaleRow name="sm" cssVar="--border-radius-sm" value="12px" visual={<RadiusBox radius={12} />} />
+<ScaleRow name="md" cssVar="--border-radius-md" value="16px" visual={<RadiusBox radius={16} />} />
+<ScaleRow name="lg" cssVar="--border-radius-lg" value="20px" visual={<RadiusBox radius={20} />} />
+<ScaleRow name="xl" cssVar="--border-radius-xl" value="24px" visual={<RadiusBox radius={24} />} />
+<ScaleRow name="2xl" cssVar="--border-radius-2xl" value="32px" visual={<RadiusBox radius={32} />} />
+<ScaleRow name="full" cssVar="--border-radius-full" value="999px" visual={<RadiusBox radius={999} />} />
+
+---
+
+## Opacity
+
+export const OpacityBox = ({ value }) => (
+  <div style={{
+    width: '48px',
+    height: '48px',
+    backgroundColor: '#17adc1',
+    borderRadius: '8px',
+    opacity: value,
+  }} />
+);
+
+<ScaleRow name="0" cssVar="--opacity-0" value="0" visual={<OpacityBox value={0} />} />
+<ScaleRow name="10" cssVar="--opacity-10" value="0.1" visual={<OpacityBox value={0.1} />} />
+<ScaleRow name="25" cssVar="--opacity-25" value="0.25" visual={<OpacityBox value={0.25} />} />
+<ScaleRow name="40" cssVar="--opacity-40" value="0.4" visual={<OpacityBox value={0.4} />} />
+<ScaleRow name="60" cssVar="--opacity-60" value="0.6" visual={<OpacityBox value={0.6} />} />
+<ScaleRow name="75" cssVar="--opacity-75" value="0.75" visual={<OpacityBox value={0.75} />} />
+<ScaleRow name="90" cssVar="--opacity-90" value="0.9" visual={<OpacityBox value={0.9} />} />
+<ScaleRow name="100" cssVar="--opacity-100" value="1" visual={<OpacityBox value={1} />} />
+
+---
+
+## Border Width
+
+export const BorderBox = ({ width }) => (
+  <div style={{
+    width: '48px',
+    height: '48px',
+    border: `${width}px solid #17adc1`,
+    borderRadius: '8px',
+    boxSizing: 'border-box',
+  }} />
+);
+
+<ScaleRow name="none" cssVar="--border-width-none" value="0" visual={<BorderBox width={0} />} />
+<ScaleRow name="xs" cssVar="--border-width-xs" value="0.5px" visual={<BorderBox width={0.5} />} />
+<ScaleRow name="sm" cssVar="--border-width-sm" value="1px" visual={<BorderBox width={1} />} />
+<ScaleRow name="md" cssVar="--border-width-md" value="2px" visual={<BorderBox width={2} />} />
+<ScaleRow name="lg" cssVar="--border-width-lg" value="4px" visual={<BorderBox width={4} />} />
+<ScaleRow name="xl" cssVar="--border-width-xl" value="8px" visual={<BorderBox width={8} />} />
