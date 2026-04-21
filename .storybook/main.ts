@@ -9,9 +9,16 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
-    "@storybook/addon-docs",    // ← должна быть
+    "@storybook/addon-docs",
   ],
-  framework: "@storybook/react-vite"
+  framework: "@storybook/react-vite",
+  viteFinal: async (config) => {
+    const { mergeConfig } = await import('vite');
+    const svgr = await import('@svgr/rollup');
+    return mergeConfig(config, {
+      plugins: [svgr.default()],
+    });
+  },
 };
 
 export default config;
